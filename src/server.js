@@ -34,7 +34,8 @@ app.post('/post-request', (req, res) => {
 });
 
 app.get('/write-file', async (req, res) => {
-  const filepath = '/tmp/.express-demo-storage';
+  // const filepath = '/tmp/.express-demo-storage';
+  const filepath = path.join(__dirname + '/../.tmp/demo-storage');
 
   let oldContent;
   try {
@@ -51,7 +52,7 @@ app.get('/write-file', async (req, res) => {
 <h1>Write to a file</h1>
 <p>Writing content: ${newContent}</p>
 
-<h2>Read from the file</h2>
+<h2>Read from the file ${filepath}</h2>
 <p>Previous content: ${oldContent}</p>
   `);
 });
