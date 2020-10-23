@@ -104,5 +104,6 @@ gcloud builds submit --tag gcr.io/<project-id>/express-demo
 gcloud run deploy express-demo --image gcr.io/<project-id>/express-demo --platform managed
 ```
 
+- Check the service in the [Cloud Run Console](https://console.cloud.google.com/run)
 - 🗑️ Clean up
   - Remove the Google project
