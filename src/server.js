@@ -6,7 +6,7 @@ const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 8080;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('tiny'));
