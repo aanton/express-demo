@@ -110,6 +110,20 @@ app.get('/sleep-js', async (req, res) => {
   `);
 });
 
+app.get('/run-command/sleep', async (req, res) => {
+  let time = req.query.time ? parseInt(req.query.time) : 1000;
+  if (!time || time < 0 || time > 120 * 1000) {
+    time = 1000;
+  }
+
+  console.log(`Sleeping ${time}ms ...`);
+  const command = `sleep ${time/1000} && echo "I have slept for ${time}ms"`;
+  const content = await runCommand(command);
+  console.log(`Woken up`);
+
+  res.send(content);
+});
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
