@@ -43,7 +43,7 @@ app.get('/write-file', async (req, res) => {
     console.log(error);
     oldContent = error;
   }
-  
+
   const newContent = `Timestamp ${Date.now()}`;
   await fs.writeFile(filepath, newContent);
 
@@ -56,10 +56,10 @@ app.get('/write-file', async (req, res) => {
   `);
 });
 
-const runCommand =  async (command) => {
+const runCommand = async (command) => {
   let stdout, stderr;
   try {
-    ({stdout, stderr} = await exec(command));
+    ({ stdout, stderr } = await exec(command));
   } catch (err) {
     console.error(err);
     stderr = JSON.stringify(err, null, 2);
@@ -82,12 +82,12 @@ app.get('/run-command/ls', async (req, res) => {
 });
 
 app.get('/run-command/gulp-version', async (req, res) => {
-  const content = await runCommand('gulp --version');
+  const content = await runCommand('npm run gulp:version');
   res.send(content);
 });
 
 app.get('/run-command/gulp-task', async (req, res) => {
-  const content = await runCommand('gulp hello');
+  const content = await runCommand('npm run gulp:hello');
   res.send(content);
 });
 

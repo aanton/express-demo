@@ -4,7 +4,9 @@
   "description": "",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "gulp:version": "gulp --version",
+    "gulp:hello": "gulp hello"
   },
   "keywords": [],
   "author": "",
