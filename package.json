@@ -1,7 +1,7 @@
 {
   "name": "express-demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "Playground project to play with Express & Google Cloud Run",
   "repository": {
     "type": "git",
     "url": "https://github.com/aanton/express-demo.git"
@@ -13,7 +13,7 @@
     "gulp:hello": "gulp hello"
   },
   "keywords": [],
-  "author": "",
+  "author": "@aanton",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.6"
