@@ -92,6 +92,24 @@ app.get('/run-command/gulp-task', async (req, res) => {
   res.send(content);
 });
 
+app.get('/sleep-js', async (req, res) => {
+  let time = req.query.time ? parseInt(req.query.time) : 1000;
+  if (!time || time < 0 || time > 120*1000) {
+    time = 1000;
+  }
+
+  const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+  console.log(`Sleeping ${time}ms ...`);
+  await sleep(time);
+  console.log(`Woken up`);
+
+  res.send(`
+<h1>Sleep (JS version)</h1>
+<p>I have slept for ${time}ms</p>
+  `);
+});
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
