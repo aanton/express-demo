@@ -76,10 +76,16 @@ const runCommand =  async (command) => {
   `;
 };
 
-app.get('/run-command-ls', async (req, res) => {
+app.get('/run-command/ls', async (req, res) => {
   const content = await runCommand('ls -1');
   res.send(content);
 });
+
+app.get('/run-command/gulp-version', async (req, res) => {
+  const content = await runCommand('gulp --version');
+  res.send(content);
+});
+
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
