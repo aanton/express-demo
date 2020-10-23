@@ -21,7 +21,7 @@ Playground project to play with [Express](https://expressjs.com/) & [Google Clou
 - Open http://localhost:8080/ in the browser
 
 ```bash
-git clone <repository>
+git clone git@github.com:aanton/express-demo.git
 cd <project>
 
 npm install
@@ -43,7 +43,7 @@ Docker must be installed locally 😉
 - Open http://localhost:9090/ in the browser
 
 ```bash
-git clone <repository>
+git clone git@github.com:aanton/express-demo.git
 cd <project>
 
 docker --version
@@ -89,7 +89,7 @@ Use the [Quickstart guide](https://cloud.google.com/run/docs/quickstarts/build-a
 - Open the service URL in the browser
 
 ```bash
-git clone <repository>
+git clone git@github.com:aanton/express-demo.git
 cd <project>
 
 gcloud --version
