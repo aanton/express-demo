@@ -34,7 +34,7 @@ app.post('/post-request', (req, res) => {
 });
 
 app.get('/write-file', async (req, res) => {
-  const filepath = path.join(__dirname + '/../.tmp/storage');
+  const filepath = '/tmp/.express-demo-storage';
 
   let oldContent;
   try {
