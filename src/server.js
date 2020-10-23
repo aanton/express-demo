@@ -86,6 +86,10 @@ app.get('/run-command/gulp-version', async (req, res) => {
   res.send(content);
 });
 
+app.get('/run-command/gulp-task', async (req, res) => {
+  const content = await runCommand('gulp hello');
+  res.send(content);
+});
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
