@@ -77,7 +77,7 @@ const runCommand = async (command) => {
 };
 
 app.get('/run-command/ls', async (req, res) => {
-  const content = await runCommand('ls -1');
+  const content = await runCommand('ls -1a');
   res.send(content);
 });
 
