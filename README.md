@@ -63,11 +63,13 @@ docker run -p 9090:8080 --rm --name playground -d docker-express-demo:0.0.1
   - Display docker disk usage
 
 ```bash
-docker stop <container-name>
+# docker stop <container-name>
 docker stop playground
 
 docker image list
-docker rmi <image-name>
+# docker rmi <image-name>:<image-tag>
+docker rmi docker-express-demo:0.0.1
+docker rmi node:12-slim
 
 docker system df -v
 ```
