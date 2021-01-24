@@ -38,7 +38,7 @@ Docker must be installed locally 😉
 - Check Docker is available
 - Build a Docker image
 - Start a contaniner using the created Docker image
-  - Bind the port used in the container (8080) to a port available in yur local machine (9090)
+  - Bind the port used in the container (8080) to a port available in your local machine (9090)
   - Configure the container to be removed when stopped (flag `--rm`)
 - Open http://localhost:9090/ in the browser
 
@@ -51,7 +51,7 @@ docker --version
 # docker build . -t <image-name>:<image-tag>
 docker build . -t docker-express-demo:0.0.1
 
-docker run -p <local-port>:<container-port> --rm --name <container-name> -d <image-name>:<image-tag>
+# docker run -p <local-port>:<container-port> --rm --name <container-name> -d <image-name>:<image-tag>
 docker run -p 9090:8080 --rm --name playground -d docker-express-demo:0.0.1
 ```
 
@@ -78,7 +78,7 @@ docker system df -v
 
 Use the [Quickstart guide](https://cloud.google.com/run/docs/quickstarts/build-and-deploy#node.js) as a reference.
 
-- Meet the requirement to use Google Cloud (see the Quickstart guide)
+- Meet the requirements to use Google Cloud (see the Quickstart guide)
 - Clone the project & change to the project directory
 - Check the Google Cloud CLI
   - Get the Google Project identifier (required for the commands)
